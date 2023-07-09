@@ -161,7 +161,7 @@ const index = () => {
         </div>}
         {signUp && <div className='container w-[30%] content-center rounded bg-white mt-[2%] border shadow-lg  p-5  '>
           <div className=" content-center ">
-            <h2 className="mb-3 text-xl font-bold text-center">Create an account to get started!</h2>
+            <h2 className="mb-3 text-2xl font-bold text-center">Create an account to get started!</h2>
 
           </div>
 
