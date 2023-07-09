@@ -2,7 +2,7 @@ import '@/styles/globals.css'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { ToastContainer } from 'react-toastify'
-import Layout from '@/src/components/app/core/Layout'
+import Layout from '@/src/components/core/Layout'
 import 'react-toastify/dist/ReactToastify.css';
 export default function App({ Component, pageProps }) {
   const router = useRouter()
@@ -15,9 +15,9 @@ export default function App({ Component, pageProps }) {
   }, [])
 
   return <>
-    <Layout>
+    {router.pathname !== '/auth' ? (<Layout>
     <Component {...pageProps} />
-    </Layout>
+    </Layout>) : ( <Component {...pageProps} />)}
     <ToastContainer
       position="top-right"
       autoClose={5000}
