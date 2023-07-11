@@ -12,7 +12,7 @@ import { toast } from 'react-toastify';
 const index = () => {
   const provider = new GoogleAuthProvider();
   const router = useRouter()
-  const [signUp, setSignUp] = useState(true)
+  const [signUp, setSignUp] = useState(false)
   const [signUpData, setSignUpData] = useState({
     email: '',
     password: ''
