@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import { ToastContainer } from 'react-toastify'
 import Layout from '@/src/components/core/Layout'
 import 'react-toastify/dist/ReactToastify.css';
+import ContextApi from '@/src/Sotrage/ContextApi'
 export default function App({ Component, pageProps }) {
   const router = useRouter()
 
@@ -14,7 +15,7 @@ export default function App({ Component, pageProps }) {
     }
   }, [])
 
-  return <>
+  return <ContextApi>
     {router.pathname !== '/auth' ? (<Layout>
     <Component {...pageProps} />
     </Layout>) : ( <Component {...pageProps} />)}
@@ -32,5 +33,5 @@ export default function App({ Component, pageProps }) {
     />
     {/* Same as */}
     <ToastContainer />
-  </>
+  </ContextApi>
 }
