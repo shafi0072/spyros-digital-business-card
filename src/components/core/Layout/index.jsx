@@ -6,7 +6,7 @@ import { userContext } from '@/src/Sotrage/ContextApi';
 
 
 const index = ({ children }) => {
-    const {infos, design, color, profileImage, logoImage } = useContext(userContext)
+    const { infos, design, color, profileImage, logoImage } = useContext(userContext)
     console.log(`bg-[${color.toString()}]`)
     return (
         <div className="flex">
@@ -52,8 +52,8 @@ const index = ({ children }) => {
                             </div>
                         </div>}
                         <div className={`w-[300px] mt-5`} >
-                                <img style={{ maxHeight: '100%', maxWidth: '100%' }} src={logoImage && URL.createObjectURL(logoImage)} alt="" />
-                            </div>
+                            <img style={{ maxHeight: '100%', maxWidth: '100%' }} src={logoImage && URL.createObjectURL(logoImage)} alt="" />
+                        </div>
                         <div className={`mt-3  pl-4`} style={{ borderLeft: `2px solid ${color}` }}>
                             <h1 className='text-xl font-bold'>{infos?.Prefix}. {infos?.first_name} {infos?.Middle_Name}  <br /> {infos?.last_name} ({infos?.Preferred_Name}) <span className='uppercase text-sm font-normal'>{infos?.Suffix}</span></h1>
 
