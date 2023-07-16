@@ -3,7 +3,7 @@ import React, { createContext, useState } from 'react';
 export const userContext = createContext()
 
 const ContextApi = ({children}) => {
-  const [color, setColor] = useState('#0e66a0') 
+  const [color, setColor] = useState('#0077B5') 
   const [profileImage, setProfileImage] = useState(null)
   const [logoImage, setLogoImage] = useState(null)
   const [design, setDesign] = useState('classic')

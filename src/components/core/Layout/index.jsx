@@ -52,17 +52,17 @@ const index = ({ children }) => {
                             </div>
                         </div>}
                         <div className={`w-[300px] mt-5`} >
-                            <img style={{ maxHeight: '100%', maxWidth: '100%' }} src={logoImage && URL.createObjectURL(logoImage)} alt="" />
+                            {logoImage && <img className='coverImage' src={logoImage && URL.createObjectURL(logoImage)} alt="" />}
                         </div>
                         <div className={`mt-3  pl-4`} style={{ borderLeft: design !== "flat" && ` 2px solid ${color}` }}>
-                            <h1 className='text-xl font-bold'>{infos?.Prefix}. {infos?.first_name} {infos?.Middle_Name}  <br /> {infos?.last_name} ({infos?.Preferred_Name}) <span className='uppercase text-sm font-normal'>{infos?.Suffix}</span></h1>
+                            <h1 className='text-xl font-bold'>{infos?.Prefix}. {infos?.first_name} {infos?.Middle_Name}  <br /> {infos?.last_name}  ({infos?.Preferred_Name}) <span className='uppercase text-sm font-normal'>{infos?.Suffix}</span></h1>
 
-                            <p className='mt-3 uppercase '>CEO</p>
-                            <p className='text-md font-bold' style={{ color: color }}>Marketing</p>
-                            <p className=' uppercase '>Company Name</p>
+                            <p className='mt-3 uppercase '>{infos?.Title}</p>
+                            <p className='text-md font-bold' style={{ color: color }}>{infos?.Department}</p>
+                            <p className=' uppercase '>{infos?.Company}</p>
                         </div>
                         <div className="mt-5 w-[300px]">
-                            <p className='italic text-sm'> Lorem ipsum dolor sit amet consectetur adipisicing <br /> elit.  Qui ipsa, saepe eos, similique culpa ad accusamus rerum praesentium molestiae, corrupti dolore dignissimos suscipit ea. Maiores tempora modi nobis iusto corporis.</p>
+                            <p className='italic text-sm'> {infos?.Headline}</p>
                         </div>
                     </div>
                     <div className="ml-2 w-[100%]">
