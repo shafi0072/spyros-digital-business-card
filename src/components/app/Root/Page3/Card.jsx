@@ -113,7 +113,60 @@ const Card = ({ fields }) => {
 
             </div>
           </div>}
+          {items === 'Link' && <div className="mt-2">
+            <h1 className="text-md">{items}</h1>
+            <div class="w-full    border  flex items-center px-3 rounded-lg">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 31.002 29.573">
+                  <g id="Page-1" transform="translate(0.5 0.501)">
+                    <g id="Dribbble-Light-Preview">
+                      <g id="icons">
+                        <path id="url-_1424_" data-name="url-[#1424]" d="M247.857,452.784a5.675,5.675,0,0,1,1-9.025,6.471,6.471,0,0,1,7.784.9l.959.913a1.585,1.585,0,0,0,2.165,0,1.408,1.408,0,0,0,0-2.062l-.81-.771a9.79,9.79,0,0,0-13.064-.448,8.459,8.459,0,0,0-.2,12.559l1.083,1.031a1.585,1.585,0,0,0,2.165,0,1.408,1.408,0,0,0,0-2.062Zm22.253.567-.781-.744a1.585,1.585,0,0,0-2.165,0,1.408,1.408,0,0,0,0,2.062l.959.913a5.73,5.73,0,0,1,.94,7.411,6.327,6.327,0,0,1-9.479.955l-1.083-1.031a1.585,1.585,0,0,0-2.165,0,1.408,1.408,0,0,0,0,2.062l1.083,1.031a9.513,9.513,0,0,0,13.162-.165,8.709,8.709,0,0,0-.47-12.493Zm-6.2,8.535-13.891-13.225a1.412,1.412,0,0,1,0-2.063,1.588,1.588,0,0,1,2.165,0l13.893,13.225a1.412,1.412,0,0,1,0,2.063,1.59,1.59,0,0,1-2.167,0Z" transform="translate(-243 -440)" stroke="#000" stroke-width="1" fill-rule="evenodd" />
+                      </g>
+                    </g>
+                  </g>
+                </svg>
 
+
+              </div>
+              <input class="appearance-none block   text-gray-700   rounded mt-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="https://abc.com" />
+
+            </div>
+            <div class="w-full  mt-2  border  flex items-center px-3 rounded-lg">
+
+              <input class="appearance-none block   text-gray-700   rounded mt-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="testweb.com/" />
+
+            </div>
+            <div class="w-full  mt-2  border  flex items-center px-3 rounded-lg">
+
+              <input class="appearance-none block   text-gray-700   rounded mt-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="testweb.com/" />
+
+            </div>
+          </div>}
+          {items === 'WhatsApp' && <div className="mt-2">
+            <h1 className="text-md">{items}</h1>
+            <div class="w-full    border  flex items-center px-3 rounded-lg">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 30.708 30.894">
+                  <g id="Group_11" data-name="Group 11" transform="translate(-1314.304 -532.5)">
+                    <g id="whatsapp-svgrepo-com" transform="translate(1314.41 532.5)">
+                      <path id="Path_14" data-name="Path 14" d="M18.447,14.412c-.376-.178-2.178-1.069-2.515-1.208s-.574-.178-.832.2-.95,1.188-1.168,1.445-.416.277-.792,0a10.158,10.158,0,0,1-2.95-1.822,10.4,10.4,0,0,1-1.98-2.554c-.218-.356,0-.554.158-.752s.356-.416.554-.634a2.752,2.752,0,0,0,.356-.614.752.752,0,0,0,0-.653c0-.178-.832-1.98-1.148-2.713s-.594-.634-.812-.634H6.527a1.426,1.426,0,0,0-.99.455A4.158,4.158,0,0,0,4.25,8a7.108,7.108,0,0,0,1.485,3.861A16.474,16.474,0,0,0,12.052,17.4c.871.376,1.544.594,2.079.772a5.009,5.009,0,0,0,2.317.139,3.821,3.821,0,0,0,2.495-1.742,3.307,3.307,0,0,0,.218-1.742A2.055,2.055,0,0,0,18.447,14.412Z" transform="translate(3.587 3.889)" stroke="#707070" stroke-width="1" />
+                      <path id="Path_15" data-name="Path 15" d="M25.736,4.817A14.573,14.573,0,0,0,15.262.5,14.731,14.731,0,0,0,2.57,22.578L.59,30.2l7.8-1.98A14.652,14.652,0,0,0,15.42,30h-.158A14.731,14.731,0,0,0,25.736,4.817ZM15.262,27.468a12.118,12.118,0,0,1-6.237-1.723l-.436-.257L3.956,26.7l1.228-4.514-.277-.455a12.227,12.227,0,1,1,10.356,5.742Z" transform="translate(0 0)" stroke="#707070" stroke-width="1" />
+                    </g>
+                  </g>
+                </svg>
+
+
+              </div>
+              <input class="appearance-none block   text-gray-700   rounded mt-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="https://abc.com" />
+
+            </div>
+            <div class="w-full  mt-2  border  flex items-center px-3 rounded-lg">
+
+              <input class="appearance-none block   text-gray-700   rounded mt-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="testweb.com/" />
+
+            </div>
+          </div>}
         </div>)
       }
     </div>

@@ -18,8 +18,8 @@ export default function App({ Component, pageProps }) {
 
   return <ContextApi>
     {router.pathname !== '/auth' ? (<Layout>
-    <Component {...pageProps} />
-    </Layout>) : ( <Component {...pageProps} />)}
+      <Component {...pageProps} />
+    </Layout>) : (<Component {...pageProps} />)}
     <ToastContainer
       position="top-right"
       autoClose={5000}
