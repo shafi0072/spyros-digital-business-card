@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import { ToastContainer } from 'react-toastify'
 import Layout from '@/src/components/core/Layout'
 import 'react-toastify/dist/ReactToastify.css';
+
 import ContextApi from '@/src/Sotrage/ContextApi'
 export default function App({ Component, pageProps }) {
   const router = useRouter()

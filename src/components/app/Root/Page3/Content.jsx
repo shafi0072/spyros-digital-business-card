@@ -24,7 +24,7 @@ const Content = ({setFields, fields}) => {
         {
           field_data?.map((items, index) => <div key={index} >
             <div className='flex justify-between items-center border-b' onClick={() => setExpand({ id: index, status: !exapnd?.status })}>
-              <h1 className='text-md font-bold' style={{ color: color }}>{items?.title} ({items?.fields?.length})</h1>
+              <h1 className='text-md font-bold' style={{ color: '#0077B5' }}>{items?.title} ({items?.fields?.length})</h1>
               {exapnd?.id === index && !exapnd?.status ? <svg height="48" viewBox="0 0 48 48" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z" /><path d="M0 0h48v48h-48z" fill="none" /></svg> : <svg height="48" viewBox="0 0 48 48" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M33.17 17.17l-9.17 9.17-9.17-9.17-2.83 2.83 12 12 12-12z" /><path d="M0 0h48v48h-48z" fill="none" /></svg>}
             </div>
             {exapnd?.id === index && !exapnd?.status  && <div class="grid grid-cols-4 gap-4 mt-3">

@@ -10,7 +10,7 @@ const index = ({ children }) => {
     console.log(`bg-[${color.toString()}]`)
     return (
         <div className="flex">
-            <div className={`col-md-1 w-[5%] h-[100]`} style={{ background: color }}>
+            <div className={`col-md-1 w-[5%] h-[100]`} style={{ background: '#0077B5' }}>
                 <div className='  pt-[40%]'>
                     <div className='text-white flex justify-center'>
                         <CalendarTodayIcon fontSize='large' />
@@ -54,7 +54,7 @@ const index = ({ children }) => {
                         <div className={`w-[300px] mt-5`} >
                             <img style={{ maxHeight: '100%', maxWidth: '100%' }} src={logoImage && URL.createObjectURL(logoImage)} alt="" />
                         </div>
-                        <div className={`mt-3  pl-4`} style={{ borderLeft: `2px solid ${color}` }}>
+                        <div className={`mt-3  pl-4`} style={{ borderLeft: design !== "flat" && ` 2px solid ${color}` }}>
                             <h1 className='text-xl font-bold'>{infos?.Prefix}. {infos?.first_name} {infos?.Middle_Name}  <br /> {infos?.last_name} ({infos?.Preferred_Name}) <span className='uppercase text-sm font-normal'>{infos?.Suffix}</span></h1>
 
                             <p className='mt-3 uppercase '>CEO</p>
