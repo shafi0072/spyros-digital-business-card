@@ -1,4 +1,5 @@
 import { Switch } from '@mui/material';
+import AddIcon from '@mui/icons-material/Add';
 import React from 'react';
 
 const Card = ({ fields }) => {
@@ -410,9 +411,9 @@ const Card = ({ fields }) => {
             </div>
 
           </div>}
-          {items === 'Image' && <div className="mt-2">
+          {items === 'Image' && <div className="mt-2 ">
             <h1 className="text-md">{items}</h1>
-            <div class="w-full    border  flex items-center px-3 rounded-lg">
+            <div class="w-full    border  flex items-center px-3 rounded-lg bg-gray-200">
               <div>
                 <svg id="image-svgrepo-com" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
                   <rect id="Rectangle_84" data-name="Rectangle 84" width="30" height="30" fill="none" />
@@ -422,8 +423,34 @@ const Card = ({ fields }) => {
 
 
               </div>
-              <input class="appearance-none block   text-gray-700   rounded mt-2 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="https://tiktok.com/username" />
-              <input class="appearance-none block text-gray-700 rounded" type="file" name="" id="" />
+              <label htmlFor='profileImage' className='flex ml-[2%]   py-1 '>
+                <AddIcon sx={{ color: '#0077B5' }} />
+                <p className="text-md">Add Media</p>
+
+              </label>
+            </div>
+
+          </div>}
+          {items === 'Gallery' && <div className="mt-2 ">
+            <h1 className="text-md">{items}</h1>
+            <div class="w-full    border  flex items-center px-3 rounded-lg bg-gray-200">
+              <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="31.774" height="29.156" viewBox="0 0 31.774 29.156">
+                  <g id="gallery-wide-svgrepo-com" transform="translate(-0.976 -2.25)">
+                    <path id="Path_26" data-name="Path 26" d="M32,18.047c0,5.944,0,8.916-1.757,10.763S25.657,30.656,20,30.656H14c-5.657,0-8.485,0-10.243-1.847S2,23.991,2,18.047,2,9.131,3.757,7.284,8.343,5.438,14,5.438h6c5.657,0,8.485,0,10.243,1.847,1,1.046,1.427,2.453,1.614,4.557" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5" />
+                    <path id="Path_27" data-name="Path 27" d="M3.988,6A2.833,2.833,0,0,1,5.353,3.937C6.887,3,9.356,3,14.294,3h5.237c4.938,0,7.407,0,8.941.937A2.833,2.833,0,0,1,29.837,6" transform="translate(0)" fill="none" stroke="#000" stroke-width="1.5" />
+                    <circle id="Ellipse_19" data-name="Ellipse 19" cx="1.5" cy="1.5" r="1.5" transform="translate(24.235 11.685)" fill="none" stroke="#000" stroke-width="1.5" />
+                    <path id="Path_28" data-name="Path 28" d="M2,13.938,4.673,12.4a4.941,4.941,0,0,1,4.794.1l6.547,4.29a4.32,4.32,0,0,0,3.914.222l.455-.21a6.535,6.535,0,0,1,5.7.225l4.92,2.9" transform="translate(0 9.219)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5" />
+                  </g>
+                </svg>
+
+
+              </div>
+              <label htmlFor='profileImage' className='flex ml-[2%]   py-1 '>
+                <AddIcon sx={{ color: '#0077B5' }} />
+                <p className="text-md">Add Media</p>
+
+              </label>
             </div>
 
           </div>}
