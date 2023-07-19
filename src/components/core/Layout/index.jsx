@@ -3,14 +3,14 @@ import CalendarTodayIcon from '@mui/icons-material/CalendarToday';
 import SettingsIcon from '@mui/icons-material/Settings';
 import Navigation from '../Navigation/Navigation';
 import { userContext } from '@/src/Sotrage/ContextApi';
-
+import MarkUnreadChatAltIcon from '@mui/icons-material/MarkUnreadChatAlt';
 
 const index = ({ children }) => {
     const { infos, design, color, profileImage, logoImage } = useContext(userContext)
     console.log(`bg-[${color.toString()}]`)
     return (
         <div className="flex">
-            <div className={`col-md-1 w-[5%] h-[100]`} style={{ background: '#0077B5' }}>
+            <div className={`col-md-1 fixed left-0  w-[5%] h-[100%]`} style={{ background: '#0077B5' }}>
                 <div className='  pt-[40%]'>
                     <div className='text-white flex justify-center'>
                         <CalendarTodayIcon fontSize='large' />
@@ -20,9 +20,9 @@ const index = ({ children }) => {
                     </div>
                 </div>
             </div>
-            <div className="">
+            <div className="w-[95%] h-full ml-[5%] ">
                 <div className=' flex '>
-                    <div className=" px-3 h-[100] ">
+                    <div className="fixed   top-8 left-[7%] px-3  mt-8">
                         {design === 'classic' && <div className='mt-4 relative'>
                             <div className='absolute bottom-[0px] top-[56%]'>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 381 88.28">
@@ -42,21 +42,23 @@ const index = ({ children }) => {
 
                             </div>
                             <div className={`w-[300px] h-[300px] `} style={{ background: color }}>
-                                <img style={{ maxHeight: '100%', maxWidth: '100%' }} src={profileImage && URL.createObjectURL(profileImage)} alt="" />
+                                <img style={{ maxHeight: '100%', maxWidth: '100%', width: '100%' }} src={profileImage && URL.createObjectURL(profileImage)} alt="" />
                             </div>
-
+                            <div className={`absolute w-[150px] -bottom-[22px] right-0 mt-5`} >
+                                {logoImage && <img className='coverImage' src={logoImage && URL.createObjectURL(logoImage)} alt="" />}
+                            </div>
                         </div>}
                         {design === 'flat' && <div className='mt-4 '>
                             <div className={`w-[300px] h-[300px] pb-5`} style={{ background: color }}>
-                                <img style={{ maxHeight: '100%', maxWidth: '100%' }} src={profileImage && URL.createObjectURL(profileImage)} alt="" />
+                                <img style={{ maxHeight: '100%', maxWidth: '100%', width: '100%' }} src={profileImage && URL.createObjectURL(profileImage)} alt="" />
                             </div>
                         </div>}
-                        <div className={`w-[300px] mt-5`} >
+                        {design === 'flat' && <div className={`w-[300px] mt-5`} >
                             {logoImage && <img className='coverImage' src={logoImage && URL.createObjectURL(logoImage)} alt="" />}
-                        </div>
+                        </div>}
+                        <div className='h-[200px] overflow-y-auto'>
                         <div className={`mt-3  pl-4`} style={{ borderLeft: design !== "flat" && ` 2px solid ${color}` }}>
-                            <h1 className='text-xl font-bold'>{infos?.Prefix}. {infos?.first_name} {infos?.Middle_Name}  <br /> {infos?.last_name}  ({infos?.Preferred_Name}) <span className='uppercase text-sm font-normal'>{infos?.Suffix}</span></h1>
-
+                            <h1 className='text-xl font-bold'>{infos?.Prefix && infos?.Prefix + '.'} {infos?.first_name} {infos?.Middle_Name}  <br /> {infos?.last_name} {infos?.Suffix}  {infos?.Maiden_Name && `(${infos?.Maiden_Name})`} <span className='uppercase text-sm font-normal'>{infos?.Accreditations}</span></h1>
                             <p className='mt-3 uppercase '>{infos?.Title}</p>
                             <p className='text-md font-bold' style={{ color: color }}>{infos?.Department}</p>
                             <p className=' uppercase '>{infos?.Company}</p>
@@ -64,8 +66,12 @@ const index = ({ children }) => {
                         <div className="mt-5 w-[300px]">
                             <p className='italic text-sm'> {infos?.Headline}</p>
                         </div>
+                        <div className="mt-5 w-[300px]">
+                            {infos?.Preferred_Name && <p className='italic text-sm text-gray-400'>   <MarkUnreadChatAltIcon size='small' /> Goes by {infos?.Preferred_Name} (He/Him)</p>}
+                        </div>
+                        </div>
                     </div>
-                    <div className="ml-2 w-[100%]">
+                    <div className=" ml-[30%] w-full ">
                         <Navigation children={children} />
                     </div>
                 </div>

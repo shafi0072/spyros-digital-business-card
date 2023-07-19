@@ -27,7 +27,7 @@ const Content = ({setFields, fields}) => {
               <h1 className='text-md font-bold' style={{ color: '#0077B5' }}>{items?.title} ({items?.fields?.length})</h1>
               {exapnd?.id === index && !exapnd?.status ? <svg height="48" viewBox="0 0 48 48" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M24 16l-12 12 2.83 2.83 9.17-9.17 9.17 9.17 2.83-2.83z" /><path d="M0 0h48v48h-48z" fill="none" /></svg> : <svg height="48" viewBox="0 0 48 48" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M33.17 17.17l-9.17 9.17-9.17-9.17-2.83 2.83 12 12 12-12z" /><path d="M0 0h48v48h-48z" fill="none" /></svg>}
             </div>
-            {exapnd?.id === index && !exapnd?.status  && <div class="grid grid-cols-4 gap-4 mt-3">
+            {exapnd?.id === index && !exapnd?.status  && <div className="grid md:grid-cols-3  gap-4 mt-3">
               {
                 items?.fields?.map((item, indes) => <div key={indes} onClick={() => handleFieldSelect(item?.name)} className='bg-gray-100 p-2 text-center rounded'>
                   <div className='flex justify-center mb-2'>{item?.icon}</div>

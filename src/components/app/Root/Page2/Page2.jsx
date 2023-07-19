@@ -28,7 +28,7 @@ const Page2 = () => {
     setLogoImage(e.target.files[0])
   }
   return (
-    <div className='mt-6 px-[10%] mb-[10%]'>
+    <div className='mt-10 px-[10%] mb-[10%]'>
       <div className='border-b pb-3'>
         <h1 className="text-md font-bold mb-5">Design</h1>
         <div className='flex'>
@@ -61,22 +61,22 @@ const Page2 = () => {
             <input type="color" id='colorPick' style={{ display: 'none' }} onChange={handleColorChange} />
           </div>
 
-          <div onClick={() => setColor('#cccc00')} class="rounded-full text-white text-center pt-[2px] w-[30px] h-[30px] bg-[#cccc00] ml-2">
+          <div onClick={() => setColor('#cccc00')} className="rounded-full text-white text-center pt-[2px] w-[30px] h-[30px] bg-[#cccc00] ml-2">
             { color === '#cccc00' && <CheckIcon />}
           </div>
-          <div onClick={() => setColor('#0077B5')} class="rounded-full text-white text-center pt-[2px] borde w-[30px] h-[30px] bg-[#0077B5] ml-2">
+          <div onClick={() => setColor('#0077B5')} className="rounded-full text-white text-center pt-[2px] borde w-[30px] h-[30px] bg-[#0077B5] ml-2">
           { color === '#0077B5' && <CheckIcon />}
           </div>
-          <div onClick={() => setColor('#1A7C16')} class="rounded-full text-white text-center pt-[2px] w-[30px] h-[30px] bg-[#1A7C16] ml-2">
+          <div onClick={() => setColor('#1A7C16')} className="rounded-full text-white text-center pt-[2px] w-[30px] h-[30px] bg-[#1A7C16] ml-2">
           { color === '#1A7C16' && <CheckIcon />}
           </div>
-          <div onClick={() => setColor('#EB531B')} class="rounded-full text-white text-center pt-[2px] w-[30px] h-[30px] bg-[#EB531B] ml-2">
+          <div onClick={() => setColor('#EB531B')} className="rounded-full text-white text-center pt-[2px] w-[30px] h-[30px] bg-[#EB531B] ml-2">
           { color === '#EB531B' && <CheckIcon />}
           </div>
-          <div onClick={() => setColor('#E31BEB')} class="rounded-full text-white text-center pt-[2px]  w-[30px] h-[30px] bg-[#E31BEB] ml-2">
+          <div onClick={() => setColor('#E31BEB')} className="rounded-full text-white text-center pt-[2px]  w-[30px] h-[30px] bg-[#E31BEB] ml-2">
           { color === '#E31BEB' && <CheckIcon />}
           </div>
-          <div onClick={() => setColor('#1D15F7')} class="rounded-full text-white text-center pt-[2px] w-[30px] h-[30px] bg-[#1D15F7] ml-2">
+          <div onClick={() => setColor('#1D15F7')} className="rounded-full text-white text-center pt-[2px] w-[30px] h-[30px] bg-[#1D15F7] ml-2">
           { color === '#1D15F7' && <CheckIcon />}
           </div>
         </div>
